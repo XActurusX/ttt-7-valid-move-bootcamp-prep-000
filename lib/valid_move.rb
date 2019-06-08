@@ -1,6 +1,7 @@
 def valid_move?(board, index)
   input = index.to_i - 1
-  return  false if position_taken?(board, index) || input > 
+  if position_taken?(board, index) || input > 8
+    return false 
   end
   return true
 end
